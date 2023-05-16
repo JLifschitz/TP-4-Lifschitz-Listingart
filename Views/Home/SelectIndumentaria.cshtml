@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "SelectIndumentaria";
+}
+<!Doctype html>
+<html lan="en">
+    <head>
+        <title>Select Indumentarias</title>
+        <link type="stylesheet" href="site.css"> 
+    </head>
+    <body>
+        <p>
+        @foreach(string item in ViewBag.equipos)
+        {
+            @(item+" , ")
+        }
+        </p>
+        <br>
+        @foreach(string item in ViewBag.medias)
+        {
+            <img src="/IMG/@item">
+        }
+        <br>
+        @foreach(string item in ViewBag.pantalones)
+        {
+            <img src="/IMG/@item">
+        }
+        <br>
+       @foreach(string item in ViewBag.remeras)
+        {
+            <img src="/IMG/@item">
+        }
+        <br>
+        <form method="post" action= "GuardarIndumentaria">  
+            <select class= "opciones" name="equipos">
+                <h3>Seleccionar un equipo:</h3>
+                @foreach (string item in ViewBag.equipos)
+                {
+                    <option value=@item>@item</option>
+                }
+            </select>
+            <select class= "opciones" name="medias">
+                <h3>Seleccionar unas medias:</h3>
+                @foreach (string item in ViewBag.medias)
+                {
+                    <option value=@item>@item.Replace(".jpg", null)</option>
+                }
+            </select>
+            <select class= "opciones" name="pantalones">
+                <h3>Seleccionar un pantalon:</h3>
+                @foreach (string item in ViewBag.pantalones)
+                {
+                    <option value=@item>@item.Replace(".jpg", null)</option>
+                }
+            </select>
+            <select class= "opciones" name="remeras">
+                <h3>Seleccionar una remera:</h3>
+                @foreach (string item in ViewBag.remeras)
+                {
+                    <option value=@item>@item.Replace(".jpg", null)</option>
+                }
+            </select>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

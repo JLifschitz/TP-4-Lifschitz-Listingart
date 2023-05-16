@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 20px 60px 0px 20px;
+  background-color: bisque
+}
+
+img {
+  height: 15rem;
+  width: 15rem;
+  margin-left: 5rem;
+  border: solid black 0.5rem;
+  background-color: white;
+}
+
+p {
+  margin: 0;
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.opciones {
+  size: 30rem;
+  align-items: center;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0; 
+  margin: 10px 0px 20px 0px;
+}
